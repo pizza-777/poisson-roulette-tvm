@@ -18,6 +18,11 @@ contract Puasson {
 	uint16 public a1xxxxxxxxx1 = 0; //1 x x x x x x x x x 1
 
 	function run() public {
+		require(
+			msg.pubkey() == tvm.pubkey() || msg.sender == address(this),
+			100,
+			"Only owner or the same contract can run. It's preventing from running by others at the same time."
+		);
 		require(counter < limit, 1001, "contract execution is finished");
 		tvm.accept();
 		counter++;
@@ -25,7 +30,7 @@ contract Puasson {
 		this.run();
 	}
 
-	function rand() public {
+	function rand() private {
 		rnd.shuffle();
 		numbers = [
 			numbers[1],
