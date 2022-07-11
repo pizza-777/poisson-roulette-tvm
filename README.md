@@ -9,8 +9,11 @@ Ispired by comment on Youtube:
 ![Poisson-distribution](graphic.png)
 
 Contract in devnet: `0:185bf0dc0828923d6b99368dfe28cd0ef86a5e58236e82876095fa74a0f1c4c3`
+
 Executions: 130037
+
 Gas: 20000 tokens
+
 Time: 11 hours
 
 ### Received Data
