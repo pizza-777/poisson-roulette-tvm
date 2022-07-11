@@ -2,9 +2,9 @@ pragma ton-solidity >=0.61.2;
 
 // 10 random at once
 contract Puasson {
-	uint256 public counter = 0;
-	uint256 limit = 1000000;
-	uint256[] public numbers = new uint256[](37);
+	uint32 public counter = 0;
+	uint32 limit = 1000000;
+	uint8[] public numbers = new uint8[](37);
 
 	// combinations
 	uint16 public a0x = 0; //1 1
@@ -291,5 +291,12 @@ contract Puasson {
 			a34x,
 			a35x
 		);
+	}
+
+	//just in case
+	function withdraw(uint128 amount) public view {
+		require(msg.pubkey() == tvm.pubkey(), 101, "Only owner.");
+		tvm.accept();
+		msg.sender.transfer(amount);
 	}
 }
