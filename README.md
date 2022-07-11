@@ -6,7 +6,7 @@ Ispired by comment on Youtube:
 
 ## Results
 
-![Poisson-distribution](graphic.png)
+![Poisson-distribution](graphic1.png)
 
 Contract in devnet: `0:185bf0dc0828923d6b99368dfe28cd0ef86a5e58236e82876095fa74a0f1c4c3`
 
